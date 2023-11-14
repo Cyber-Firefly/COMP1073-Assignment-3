@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Pizza Maker</title>
+    <!-- link CSS file -->
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    
+    <button id="showStudentInfoBtn">Show Student Info</button>
+    <div id="studentInfo"></div> <!-- Dynamically show my name and student number by clicking the button -->
+
+    <form id="pizzaOrderForm">
+        <h2>Order Your Pizza</h2>
+
+        <!-- Customer Name -->
+        <label for="customerName">Your Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <!-- Pizza Size -->
+        <label for="size">Size:</label>
+        <select id="size" name="size" required>
+            <option value="">Select a size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <!-- Pizza Toppings -->
+        <fieldset id="toppingsFieldset">
+            <legend>Toppings (select at least one):</legend>
+            <label><input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni</label>
+            <label><input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms</label>
+            <label><input type="checkbox" name="toppings" value="Onions"> Onions</label>
+            <label><input type="checkbox" name="toppings" value="Ground beef"> Ground Beef</label>
+            <label><input type="checkbox" name="toppings" value="Spicy Sausage"> Spicy Sausages</label>
+            <label><input type="checkbox" name="toppings" value="Ham"> Ham</label>
+            <label><input type="checkbox" name="toppings" value="Chicken"> Chicken</label>
+        </fieldset>
+
+        <!-- Pizza Sauces -->
+        <fieldset id="saucesFieldset">
+            <legend>Sauces (select at least one):</legend>
+            <label><input type="checkbox" name="sauces" value="Pizza Sauce"> Pizza Sauce</label>
+            <label><input type="checkbox" name="sauces" value="BBQ Sauce"> BBQ Sauce</label>
+            <label><input type="checkbox" name="sauces" value="Garlic Parmesan"> Garlic Parmesan</label>
+        </fieldset>
+
+        <button type="button" id="orderButton">Order</button>
+    </form>
+
+    <!-- Show the order summary -->
+    <div id="orderSummary"></div>
 </body>
+<!-- Link to JS file -->
 <script src="./scripts/main.js"></script>
 </html>
